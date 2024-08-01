@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/div1.html" onsubmit="return register()">
+    <input type="text" placeholder="Enter Name" id="name"><br>
+    <input type="email" placeholder="Enter Email"  id="email"><br>
+    <input type="number" placeholder="Enter Number"  id="number"><br>
+    <input type="text" placeholder="Enter Address"  id="address"><br>
+    <button >submit</button>
+</form>
+<p id="btn"></p>
+<script>
+function register(){
+ var name=document.getElementById("name").value
+var email=document.getElementById("email").value
+var contact=document.getElementById("number").value
+var address=document.getElementById("address").value
+if(name!="" && contact!="" && email!="" && address!=""){
+    return true
+}
+else{
+    document.getElementById("btn").innerHTML="Please fill every field of form"
+return false
+
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Number1:</label><br>
+    <input type="number" placeholder="enter first number" id="num1"><br>
+    <label>Number2:</label><br>
+    <input type="number" placeholder="enter second number" id="num2"><br><br>
+    <!-- <button onclick="add()">Add</button>
+    <button onclick="sub()">Sub</button>
+    <button onclick="mul()">Mul</button>
+    <button onclick="div()">Divide</button>
+    <button onclick="rem()">Remainder</button><br><br>
+    <input id="res"></p>
+    <script>
+function add(){
+    var a=parseInt(document.getElementById("num1").value)
+    var b=parseInt(document.getElementById("num2").value)
+    document.getElementById("res").value="Result is:"+(a+b)
+}
+function sub(){
+    var a=parseInt(document.getElementById("num1").value)
+    var b=parseInt(document.getElementById("num2").value)
+    document.getElementById("res").value="Result is:"+(a-b)
+}
+function mul(){
+    var a=parseInt(document.getElementById("num1").value)
+    var b=parseInt(document.getElementById("num2").value)
+    document.getElementById("res").value="Result is:"+(a*b)
+}
+function div(){
+    var a=parseInt(document.getElementById("num1").value)
+    var b=parseInt(document.getElementById("num2").value)
+    document.getElementById("res").value="Result is:"+(a/b)
+}
+function rem(){
+    var a=parseInt(document.getElementById("num1").value)
+    var b=parseInt(document.getElementById("num2").value)
+    document.getElementById("res").value="Result is:"+(a%b)
+}
+
+    </script> -->
+    <button onclick="cal('add')">Add</button>
+    <button onclick="cal('sub')">Sub</button>
+    <button onclick="cal('mul')">Mul</button>
+    <button onclick="cal('div')">Divide</button>
+    <button onclick="cal('rem')">Remainder</button><br><br>
+    <input id="res"></p>
+    <script>
+function cal(data){
+    var a=parseInt(document.getElementById("num1").value)
+    var b=parseInt(document.getElementById("num2").value)
+    if(data=='add'){
+       document.getElementById("res").value=a+b
+    }
+    else if(data=='sub'){
+        document.getElementById("res").value=a-b
+    }
+    else if(data=='mul'){
+        document.getElementById("res").value=a*b
+    } else if(data=='div'){
+        document.getElementById("res").value=a/b
+    } else{
+        document.getElementById("res").value=a%b
+    }
+}
+    </script>
+</body>
+</html>

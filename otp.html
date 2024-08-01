@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="onetime()">OTP</button>
+    <p id="otp"></p>
+    <script>
+function onetime(){
+    var n=(Math.round(Math.random()*10000));
+
+    if(n>999){
+        document.getElementById("otp").innerText=n
+    }
+    else{
+        return onetime()
+    }
+}
+      
+    </script>
+</body>
+</html>
