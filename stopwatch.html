@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 >Stop Watch</h1>
+    <p id="watch"></p>
+    <button onclick="start1()" >Start</button>
+    <button onclick="stop1()" >Stop</button>
+    <button onclick="Reset1()" >Reset</button>
+    <script>
+        var h="00";
+        var m="00";
+        var s="00";
+        document.getElementById("watch").innerText=h+" :"+m+" :"+s 
+     var b   
+       
+ function start1(){
+    
+    
+        b=setInterval(function(){
+            console.log(typeof(s))
+          s++
+          if(s>=0 && s<10 ){
+            s=0+""+s
+          }
+            if(s==60){
+                s=0+""+0
+                m++
+                if(m>=0 && m<10 ){
+                    m=0+""+m
+                  }
+    
+                if(m==60){
+                    m=0+""+0
+                    h++
+                    if(h>=0 && h<10 ){
+                        h=0+""+h
+                      }
+    
+                    
+                }
+        
+            }
+            document.getElementById("watch").innerText=h+" :"+m+" :"+s 
+           
+        },1000)
+    }
+     
+
+ 
+function stop1(){
+    console.log(true)
+    clearInterval(b)
+}
+function Reset1(){
+    clearInterval(b)
+    h="00";
+    m="00";
+    s="00";
+    document.getElementById("watch").innerText=h+" :"+m+" :"+s 
+}
+
+
+ 
+
+
+
+    </script>
+</body>
+</html>

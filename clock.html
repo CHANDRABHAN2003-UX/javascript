@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Digital Clock</p>
+<button onclick="Date1()" id="one">show</button>
+    <button onclick="closeFun()">close</button>
+    
+    <script>
+        function Date1(){
+          setInterval(function(){
+
+            var a=new Date() 
+            var b=a.getHours()
+            var c=a.getMinutes()
+            var d=a.getSeconds()
+            var t=""
+            if(b>=12){
+                t="pm"
+                b=b-12
+            }
+            if(b<10){
+                b=0+""+b
+            }
+            if(d<10){
+                d=0+""+d
+            }
+
+           document.getElementById("one").innerHTML=b+" :"+c+" :"+d+" "+t
+          },1000)
+
+          
+            
+      }
+   function closeFun(){
+            window.close()
+        }
+    </script>
+</body>
+</html>

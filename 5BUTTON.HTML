@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openFun()">open</button>
+    <button onclick="closeFun()">close</button>
+    <button onclick="assignFun()">assign</button>
+    <button onclick="replaceFun()">replace</button>
+    <button onclick="printFun()">print</button>
+    <button onclick="backFun()">back</button>
+    <button onclick="pathFun()">path</button>
+
+
+
+    <script>
+        function openFun(){
+            window.open('clock.html')
+            // opens new page
+        }
+        function closeFun(){
+            window.close()
+        }
+        function assignFun(){
+            window.location.assign('calculator.html')
+        }
+        function replaceFun(){
+            window.location.replace('image.html')
+        }
+        function printFun(){
+            window.print()
+        }
+        function backFun(){
+            window.location.go(-1)
+        }
+        function pathFun(){
+            console.log(window.location.href);
+        }
+    </script>
+</body>
+</html>

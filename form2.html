@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Name:</label>
+    <input type="text" placeholder="Enter Name"  id="name" onfocus="Focus(this.id)" onBlur="Blur(this.id)"><br>
+    <label>Email:</label>
+    <input type="email" placeholder="Enter Email"><br>
+    <label>Name:</label>
+    <input type="Password" placeholder="Enter Password"><br>
+    <script>
+        function Focus(id){
+document.getElementById("id").style.backgroundColor="blue"
+        }
+    </script>
+</body>
+</html>

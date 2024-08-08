@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+   <h1>Digital Clock</h1>
+   <p id="digital"> </p>
+    <script>
+        var a=new Date()
+        var h=a.getHours()
+        var m=a.getMinutes()
+        var s=a.getSeconds()
+        function show(){
+            document.getElementById("digital").innerText=h+" :"+m+" :"+s
+        }
+        show()
+        setInterval(function(){
+   s++
+   if(s==60){
+    s=0
+    m++
+    if(m==60){
+        m=0
+        h++
+    }
+    if(h==24){
+        m=0
+        s=0
+        h=0
+    }
+   }
+   show()
+        },1000)
+    </script>
+</body>
+</html>
